@@ -15,7 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from eventapplication import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('home/', views.home , name='home'),
+    path('registration/',views.registration , name='registration'),
+    path('listofparticipants/',views.listofparticipants,name='listofparticipants'),
+    path('success/',views.success, name='success'),
+    path('failed/',views.failed , name='failed'),
 ]
+
